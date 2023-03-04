@@ -1,0 +1,148 @@
+[
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "sqlite3",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sqlite3",
+        "description": "sqlite3",
+        "detail": "sqlite3",
+        "documentation": {}
+    },
+    {
+        "label": "Error",
+        "importPath": "sqlite3",
+        "description": "sqlite3",
+        "isExtraImport": true,
+        "detail": "sqlite3",
+        "documentation": {}
+    },
+    {
+        "label": "shlex",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "shlex",
+        "description": "shlex",
+        "detail": "shlex",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Thread",
+        "importPath": "threading",
+        "description": "threading",
+        "isExtraImport": true,
+        "detail": "threading",
+        "documentation": {}
+    },
+    {
+        "label": "open_fs",
+        "importPath": "fs",
+        "description": "fs",
+        "isExtraImport": true,
+        "detail": "fs",
+        "documentation": {}
+    },
+    {
+        "label": "Walker",
+        "importPath": "fs.walk",
+        "description": "fs.walk",
+        "isExtraImport": true,
+        "detail": "fs.walk",
+        "documentation": {}
+    },
+    {
+        "label": "Database",
+        "importPath": "lib.Database",
+        "description": "lib.Database",
+        "isExtraImport": true,
+        "detail": "lib.Database",
+        "documentation": {}
+    },
+    {
+        "label": "sleep",
+        "importPath": "time",
+        "description": "time",
+        "isExtraImport": true,
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "Database",
+        "kind": 6,
+        "importPath": "lib.Database",
+        "description": "lib.Database",
+        "peekOfCode": "class Database:\n    def __init__(self):\n        super(Database, self).__init__()\n        self.database ='src/_database.db'\n    def select(self, keyword=str()):\n        try:\n            connection = sqlite3.connect(self.database)\n            cursor = connection.cursor()\n            match keyword:\n                case 'Search':",
+        "detail": "lib.Database",
+        "documentation": {}
+    },
+    {
+        "label": "Correcture",
+        "kind": 6,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "class Correcture(Thread):\n    def __init__(self) -> None:\n        super(Correcture, self).__init__()\n        self.search = Database().select('Search')\n        self.filter = Database().select('Filter')\n        self.exclude = Database().select('ExcludeDirs')\n        self.ierrors = Database().select('IgnoreErrors')\n    def run(self) -> None:\n        \"\"\"        try:\n            self.sync()",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "excluding_list",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "excluding_list = []\ntemp_list = []\npattern1 = ['т','┤','Х','и','╨','д','Б', ' ']\npattern2 = ['_DE', '_MA', '_GE', '_SO', '_EN', '_BI']\nclass Correcture(Thread):\n    def __init__(self) -> None:\n        super(Correcture, self).__init__()\n        self.search = Database().select('Search')\n        self.filter = Database().select('Filter')\n        self.exclude = Database().select('ExcludeDirs')",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "temp_list",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "temp_list = []\npattern1 = ['т','┤','Х','и','╨','д','Б', ' ']\npattern2 = ['_DE', '_MA', '_GE', '_SO', '_EN', '_BI']\nclass Correcture(Thread):\n    def __init__(self) -> None:\n        super(Correcture, self).__init__()\n        self.search = Database().select('Search')\n        self.filter = Database().select('Filter')\n        self.exclude = Database().select('ExcludeDirs')\n        self.ierrors = Database().select('IgnoreErrors')",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "pattern1",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "pattern1 = ['т','┤','Х','и','╨','д','Б', ' ']\npattern2 = ['_DE', '_MA', '_GE', '_SO', '_EN', '_BI']\nclass Correcture(Thread):\n    def __init__(self) -> None:\n        super(Correcture, self).__init__()\n        self.search = Database().select('Search')\n        self.filter = Database().select('Filter')\n        self.exclude = Database().select('ExcludeDirs')\n        self.ierrors = Database().select('IgnoreErrors')\n    def run(self) -> None:",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "pattern2",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "pattern2 = ['_DE', '_MA', '_GE', '_SO', '_EN', '_BI']\nclass Correcture(Thread):\n    def __init__(self) -> None:\n        super(Correcture, self).__init__()\n        self.search = Database().select('Search')\n        self.filter = Database().select('Filter')\n        self.exclude = Database().select('ExcludeDirs')\n        self.ierrors = Database().select('IgnoreErrors')\n    def run(self) -> None:\n        \"\"\"        try:",
+        "detail": "main",
+        "documentation": {}
+    }
+]
